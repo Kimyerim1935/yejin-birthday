@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>👑 지상 최대의 축제 : 예찌니 DAY 초대장 👑</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <!-- Google Fonts: Pretendard alternative & Gamja Flower for playful touches -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700;900&family=Black+Han+Sans&family=Gaegu:wght@700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans KR"', 'sans-serif'],
+            title: ['"Black Han Sans"', 'sans-serif'],
+            hand: ['"Gaegu"', 'cursive'],
+          },
+          colors: {
+            party: {
+              pink: '#ff4d8d',
+              rose: '#ff758c',
+              purple: '#845ec2',
+              gold: '#ffd166',
+              dark: '#160d27'
+            }
+          },
+          animation: {
+            'float': 'float 3s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+            'shimmer': 'shimmer 2.5s infinite linear',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-10px) rotate(2deg)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { boxShadow: '0 0 20px rgba(255, 77, 141, 0.4), 0 0 40px rgba(132, 94, 194, 0.3)' },
+              '50%': { boxShadow: '0 0 35px rgba(255, 77, 141, 0.8), 0 0 60px rgba(255, 209, 102, 0.6)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Glassmorphism custom styles */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .glass-card-strong {
+      background: rgba(22, 13, 39, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 117, 140, 0.3);
+    }
+    .neon-text-pink {
+      text-shadow: 0 0 10px rgba(255, 77, 141, 0.7), 0 0 25px rgba(255, 77, 141, 0.5);
+    }
+    .neon-text-gold {
+      text-shadow: 0 0 8px rgba(255, 209, 102, 0.8), 0 0 20px rgba(255, 170, 0, 0.6);
+    }
+    .badge-gradient {
+      background: linear-gradient(135deg, #ff4d8d, #845ec2);
+    }
+    /* Hide scrollbar */
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-[#0f091c] text-white min-h-screen relative overflow-x-hidden selection:bg-pink-500 selection:text-white flex justify-center">
+
+  <!-- Background decorative glowing orbs -->
+  <div class="fixed top-[-10%] left-[-10%] w-[350px] h-[350px] rounded-full bg-pink-600/30 blur-[100px] pointer-events-none"></div>
+  <div class="fixed bottom-[-10%] right-[-10%] w-[400px] h-[400px] rounded-full bg-purple-600/30 blur-[120px] pointer-events-none"></div>
+  <div class="fixed top-[40%] right-[-20%] w-[250px] h-[250px] rounded-full bg-yellow-500/20 blur-[90px] pointer-events-none"></div>
+
+  <!-- Mobile Wrapper Container -->
+  <div class="w-full max-w-md min-h-screen flex flex-col justify-between p-4 sm:p-6 relative z-10">
+
+    <!-- Top Floating Tag -->
+    <header class="text-center pt-4 pb-2">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-gradient text-xs font-bold tracking-widest uppercase shadow-lg shadow-pink-500/30 animate-pulse">
+        <span>✨ VIP OFFICIAL INVITATION ✨</span>
+      </div>
+      <p class="text-xs text-pink-300 mt-2 tracking-widest font-light">LIMITED EDITION PARTY 2026</p>
+    </header>
+
+    <!-- Main Hero Section -->
+    <main class="space-y-6 my-auto py-4">
+      <div class="glass-card-strong rounded-3xl p-6 shadow-2xl relative border border-white/20 text-center animate-pulse-glow">
+        
+        <!-- Party Crown Floating Icon -->
+        <div class="absolute -top-7 left-1/2 -translate-x-1/2 text-5xl filter drop-shadow-[0_4px_10px_rgba(255,209,102,0.8)] animate-float">
+          👑
+        </div>
+
+        <div class="mt-4">
+          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-white/10 text-yellow-300 tracking-wider inline-block mb-2">
+            지상 최대의 축제
+          </span>
+          <h1 class="font-title text-4xl sm:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-rose-300 to-yellow-300 tracking-tight leading-none mb-1">
+            예찌니 DAY
+          </h1>
+          <p class="font-bold text-lg text-pink-200 neon-text-pink mt-1">
+            생일파티에 당신을 초대합니다! 🎉
+          </p>
+        </div>
+
+        <!-- 주접 멘트 하이라이트 박스 -->
+        <div class="my-5 p-4 rounded-2xl bg-white/5 border border-pink-500/30 text-left space-y-2.5 relative overflow-hidden">
+          <div class="absolute -right-2 -bottom-2 text-6xl opacity-10 select-none pointer-events-none">💖</div>
+          <div class="flex items-start gap-2.5">
+            <span class="text-xl">☀️</span>
+            <p class="text-xs sm:text-sm text-pink-100/90 leading-relaxed">
+              오늘 아침 해가 왜 눈부시게 뜨나 했더니... <strong class="text-yellow-300 font-semibold">예찌니 비추려고</strong> 떴다네요✨
+            </p>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <span class="text-xl">💎</span>
+            <p class="text-xs sm:text-sm text-pink-100/90 leading-relaxed">
+              국보급 미모와 황금빛 인성으로 세상을 정화하러 내려오신 <strong class="text-pink-300 font-semibold">슈퍼스타 예찌니 님의 탄생일</strong>!
+            </p>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <span class="text-xl">🌍</span>
+            <p class="text-xs sm:text-sm text-pink-100/90 leading-relaxed">
+              인류의 축복이자 존재 자체가 복지! 참석만 해도 안구 정화와 행복 지수 급상승을 보장합니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- Touch Sparkle Effect trigger -->
+        <button onclick="triggerConfettiBurst(event)" class="text-xs text-yellow-300/80 hover:text-yellow-300 flex items-center justify-center gap-1 mx-auto transition-transform active:scale-95">
+          <span>✨</span> 터치해서 축하 팡파레 터뜨리기 <span>✨</span>
+        </button>
+      </div>
+
+      <!-- Details Card Section -->
+      <section class="space-y-3">
+        <h2 class="text-xs font-bold text-gray-400 uppercase tracking-widest px-2">Party Checklist</h2>
+
+        <!-- 시간 -->
+        <div class="glass-card rounded-2xl p-4 flex items-center gap-4 transition hover:border-pink-500/50">
+          <div class="w-12 h-12 rounded-xl bg-pink-500/20 border border-pink-500/40 flex items-center justify-center text-2xl flex-shrink-0">
+            ⏰
+          </div>
+          <div class="flex-1">
+            <div class="text-xs text-pink-300 font-medium">시간 (Time)</div>
+            <div class="text-lg font-bold text-white tracking-wide">18:30 <span class="text-xs font-normal text-yellow-300">정각 입장 요망</span></div>
+          </div>
+          <div class="text-right">
+            <span class="text-xs px-2.5 py-1 rounded-full bg-pink-500/30 text-pink-200 border border-pink-500/40 font-semibold">
+              칼시간 엄수
+            </span>
+          </div>
+        </div>
+
+        <!-- 장소 (비밀 & 인터랙션) -->
+        <div class="glass-card rounded-2xl p-4 transition border border-yellow-500/30 hover:border-yellow-400">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-yellow-500/20 border border-yellow-500/40 flex items-center justify-center text-2xl flex-shrink-0">
+              🕵️‍♂️
+            </div>
+            <div class="flex-1">
+              <div class="text-xs text-yellow-300 font-medium">장소 (Location)</div>
+              <div class="text-lg font-bold text-white flex items-center gap-2">
+                <span id="secretLocationText" class="tracking-wider">TOP SECRET (비밀)</span>
+                <span id="secretLockBadge" class="text-xs px-2 py-0.5 rounded bg-red-500/40 text-red-200 border border-red-500/50">1급 기밀</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Secret reveal toggle interactive button -->
+          <div class="mt-3 pt-3 border-t border-white/10 flex justify-between items-center">
+            <span class="text-xs text-gray-300">장소가 궁금하다면?</span>
+            <button onclick="revealSecretPlace()" id="revealBtn" class="text-xs px-3 py-1.5 rounded-lg bg-yellow-400 text-gray-950 font-bold hover:bg-yellow-300 active:scale-95 transition shadow">
+              🔍 암호 해독하기
+            </button>
+          </div>
+        </div>
+
+        <!-- 드레스코드 -->
+        <div class="glass-card rounded-2xl p-4 flex items-center gap-4 transition hover:border-pink-500/50">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-2xl flex-shrink-0">
+            🕶️
+          </div>
+          <div class="flex-1">
+            <div class="text-xs text-purple-300 font-medium">드레스코드 (Dress Code)</div>
+            <div class="text-base sm:text-lg font-bold text-white">멋쟁이 (Fashionista)</div>
+            <p class="text-xs text-gray-300 mt-0.5">레드카펫 밟을 각오하고 풀세팅 요망 👠👔</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RSVP Action Section -->
+      <section class="glass-card-strong rounded-3xl p-5 border border-pink-500/40 text-center space-y-4 shadow-xl">
+        <div>
+          <span class="text-[11px] font-bold tracking-widest text-red-400 uppercase bg-red-950/60 px-2.5 py-1 rounded-full border border-red-500/40 inline-block mb-1">
+            ⚠️ 필수 조항
+          </span>
+          <h3 class="text-xl font-bold text-white">"불참은 없어"</h3>
+          <p class="text-xs text-pink-200/80 mt-1">
+            선택권은 오직 <strong>[참석]</strong>과 <strong>[무조건 참석]</strong>뿐입니다.
+          </p>
+        </div>
+
+        <!-- Buttons Container with dynamic runaway button -->
+        <div class="relative w-full min-h-[140px] flex flex-col gap-2.5 justify-center items-center p-2 rounded-2xl bg-black/20" id="rsvpArea">
+          
+          <button onclick="handleAttendance('참석')" class="w-full py-3.5 px-6 rounded-xl font-bold text-white bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 shadow-lg shadow-pink-500/40 active:scale-98 transition flex items-center justify-center gap-2">
+            <span>💖</span> 영광스럽게 참석하겠습니다 <span>💖</span>
+          </button>
+
+          <button onclick="handleAttendance('무조건 참석')" class="w-full py-3 px-6 rounded-xl font-bold text-purple-200 bg-purple-900/60 border border-purple-400/40 hover:bg-purple-800/80 active:scale-98 transition flex items-center justify-center gap-2 text-sm">
+            <span>🔥</span> 무조건 1등으로 달려감! (VIP)
+          </button>
+
+          <!-- Run-away "불참" button (Tries to escape on hover/touch) -->
+          <div class="w-full pt-1 relative" id="dodgeContainer">
+            <button id="noBtn" 
+                    onmouseover="dodgeButton(this)" 
+                    onclick="handleDeclineClick(this)"
+                    class="text-xs text-gray-400 underline hover:text-red-400 py-1 px-3 transition-all duration-200 rounded-md">
+              (혹시 불참하시겠습니까?)
+            </button>
+          </div>
+        </div>
+
+        <!-- RSVP Count Simulator -->
+        <div class="flex items-center justify-between text-xs text-gray-400 pt-1 px-2 border-t border-white/10">
+          <span>현재 참석 확정 인원</span>
+          <span class="font-bold text-yellow-300 flex items-center gap-1">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            전원 참석 예정 (0명 불참)
+          </span>
+        </div>
+      </section>
+
+      <!-- Action buttons: Share & Add to Calendar -->
+      <footer class="space-y-3 pb-6">
+        <div class="grid grid-cols-2 gap-3">
+          <button onclick="copyInvitationLink()" class="py-3 px-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-xs font-semibold flex items-center justify-center gap-2 active:scale-95 transition">
+            <span class="text-base">🔗</span> 링크 복사하기
+          </button>
+          <button onclick="addToCalendarAlert()" class="py-3 px-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-xs font-semibold flex items-center justify-center gap-2 active:scale-95 transition">
+            <span class="text-base">📅</span> 일정 알림 등록
+          </button>
+        </div>
+
+        <p class="text-[11px] text-center text-gray-400">
+          주최: 예찌니 탄생 헌정위원회 | 문의: 예찌니에게 직접 경배
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Custom Popup Modal (No browser alert()) -->
+  <div id="customModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="glass-card-strong w-full max-w-sm rounded-3xl p-6 border border-pink-500/50 shadow-2xl text-center transform scale-95 transition-all duration-300" id="modalCard">
+      <div id="modalIcon" class="text-5xl mb-3 animate-bounce">💌</div>
+      <h3 id="modalTitle" class="text-xl font-bold text-white mb-2">알림</h3>
+      <p id="modalDesc" class="text-sm text-pink-100/90 whitespace-pre-line leading-relaxed mb-5"></p>
+      <button onclick="closeModal()" class="w-full py-3 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold shadow-lg shadow-pink-500/30 hover:opacity-90 active:scale-95 transition">
+        확인 완료 ✨
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Message -->
+  <div id="toast" class="fixed bottom-6 z-50 px-5 py-3 rounded-2xl bg-white text-gray-900 font-bold text-xs shadow-2xl transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
+    ✨ 링크가 클립보드에 복사되었습니다!
+  </div>
+
+  <script>
+    // 1. Initial Confetti Celebration on Page Load
+    window.addEventListener('load', () => {
+      const duration = 2.5 * 1000;
+      const end = Date.now() + duration;
+
+      (function frame() {
+        confetti({
+          particleCount: 3,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: ['#ff4d8d', '#ffd166', '#845ec2']
+        });
+        confetti({
+          particleCount: 3,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: ['#ff4d8d', '#ffd166', '#845ec2']
+        });
+
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      }());
+    });
+
+    // 2. Confetti burst on click
+    function triggerConfettiBurst(e) {
+      const rect = e.target.getBoundingClientRect();
+      const x = (rect.left + rect.width / 2) / window.innerWidth;
+      const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+      confetti({
+        particleCount: 80,
+        spread: 70,
+        origin: { x, y },
+        colors: ['#ff4d8d', '#ffd166', '#ffffff', '#845ec2']
+      });
+    }
+
+    // 3. Secret Location Reveal Interaction
+    let isRevealed = false;
+    function revealSecretPlace() {
+      const locText = document.getElementById('secretLocationText');
+      const badge = document.getElementById('secretLockBadge');
+      const btn = document.getElementById('revealBtn');
+
+      if (!isRevealed) {
+        // Dramatic animation sequence
+        locText.textContent = "암호 해독 중...";
+        btn.disabled = true;
+        btn.textContent = "해독 진행 중...";
+
+        setTimeout(() => {
+          locText.innerHTML = "🎂 예찌니 아지트 (D-DAY 직전 개별 비밀지령 하달)";
+          locText.classList.add('text-pink-300');
+          badge.textContent = "암호 해제됨";
+          badge.className = "text-xs px-2 py-0.5 rounded bg-emerald-500/40 text-emerald-200 border border-emerald-500/50";
+          btn.textContent = "🔒 다시 잠그기";
+          btn.disabled = false;
+          isRevealed = true;
+          
+          showModal(
+            "🕵️‍♂️ 1급 보안 해제 성공!", 
+            "축하합니다! VIP 보안 인증이 완료되었습니다.\n\n정확한 접선 좌표는 예찌니 님의 기분에 따라 파티 직전 암호문으로 개별 하달됩니다!\n(휴대폰 알림을 주시하세요)"
+          );
+        }, 700);
+      } else {
+        locText.textContent = "TOP SECRET (비밀)";
+        locText.classList.remove('text-pink-300');
+        badge.textContent = "1급 기밀";
+        badge.className = "text-xs px-2 py-0.5 rounded bg-red-500/40 text-red-200 border border-red-500/50";
+        btn.textContent = "🔍 암호 해독하기";
+        isRevealed = false;
+      }
+    }
+
+    // 4. Runaway 'No' Button logic (불참 버튼 도망치기)
+    let dodgeCount = 0;
+    function dodgeButton(btn) {
+      if (dodgeCount < 3) {
+        const xOffset = (Math.random() - 0.5) * 160;
+        const yOffset = (Math.random() - 0.5) * 60;
+        btn.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+        dodgeCount++;
+      } else {
+        btn.textContent = "불참 버튼이 소멸되었습니다 👻";
+        btn.disabled = true;
+        btn.classList.add('opacity-40');
+      }
+    }
+
+    // 5. Handle Click on Decline button
+    function handleDeclineClick(btn) {
+      showModal(
+        "🚫 오류 코드 404: 불참 불가",
+        "시스템 상 '불참' 옵션은 애초에 탑재되지 않았습니다.\n\n예찌니 님의 탄생일에는 전 지구인이 참석하는 것이 원칙입니다. 지금 바로 [참석] 버튼을 눌러 영광을 누리세요!"
+      );
+      dodgeButton(btn);
+    }
+
+    // 6. Handle RSVP Acceptance
+    function handleAttendance(type) {
+      confetti({
+        particleCount: 150,
+        spread: 90,
+        origin: { y: 0.6 },
+        colors: ['#ff4d8d', '#ffd166', '#00e1d9', '#ffffff']
+      });
+
+      showModal(
+        "🎉 참석 예약이 완료되었습니다!",
+        `[${type}] 선택 완료!\n\n예찌니 님의 생일 성은을 입게 되신 것을 진심으로 축하드립니다.\n\n📌 18:30분까지 풀착장 '멋쟁이' 상태로 대기 바랍니다.`
+      );
+    }
+
+    // 7. Custom Modal System
+    function showModal(title, desc) {
+      const modal = document.getElementById('customModal');
+      const modalCard = document.getElementById('modalCard');
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalDesc').textContent = desc;
+      
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modalCard.classList.remove('scale-95');
+        modalCard.classList.add('scale-100');
+      }, 10);
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('customModal');
+      const modalCard = document.getElementById('modalCard');
+      modalCard.classList.remove('scale-100');
+      modalCard.classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 150);
+    }
+
+    // 8. Copy Link Function (using execCommand for iframe safety)
+    function copyInvitationLink() {
+      const dummy = document.createElement('input');
+      const url = window.location.href;
+      document.body.appendChild(dummy);
+      dummy.value = url;
+      dummy.select();
+      try {
+        document.execCommand('copy');
+        showToast("💌 초대장 링크가 복사되었습니다! 친구들에게 공유하세요.");
+      } catch (err) {
+        showToast("링크 복사를 지원하지 않는 브라우저입니다.");
+      }
+      document.body.removeChild(dummy);
+    }
+
+    // 9. Calendar alert simulation
+    function addToCalendarAlert() {
+      showModal(
+        "📅 캘린더 등록 안내",
+        "일시: 18:30 (예찌니 DAY)\n내용: 예찌니 생일파티 참석\n준비물: 멋쟁이 옷, 축하의 마음, 안구정화 준비\n\n중요도: ★★★★★ (취소 불가능한 일정입니다)"
+      );
+    }
+
+    // 10. Toast helper
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      }, 2500);
+    }
+  </script>
+</body>
+</html>
